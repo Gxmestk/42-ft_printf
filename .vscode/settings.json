@@ -1,9 +1,0 @@
-{
-    "files.associations": {
-		"ft_printf.h": "c",
-		"stdio.h": "c"
-	},
-    "editor.insertSpaces": false,
-	"editor.detectIndentation": false,
-	"C_Cpp.errorSquiggles": "Disabled"
-}
