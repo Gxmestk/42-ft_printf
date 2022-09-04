@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/03 22:34:52 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/04 05:56:38 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/04 10:45:55 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ typedef struct s_format
 	int		zero;
 	int		pcs;
 	int		p;
-	int		pcs;
 	int		perc;
 }		t_format;
 
@@ -64,5 +63,9 @@ typedef struct s_printf
 }		t_printf;
 
 int		ft_printf(const char *str, ...);
-
+char	Check_Format(char c, va_list args, t_format *f);
+int	Check_Flag(char c, t_format *f)
+int	Check_Min_Width(char c, va_list args, t_format *f);
+int	Check_Precision(char c, va_list args, t_format *f);
+int	Check_Length_Modifier(char c, va_list args, t_format *f);
 #endif

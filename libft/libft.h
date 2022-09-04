@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 00:07:54 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/04 05:56:46 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/04 10:09:40 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,4 +17,5 @@
 # include <unistd.h>
 # include <stdio.h>
 
+int	ft_isdigit(int c);
 #endif

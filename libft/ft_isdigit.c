@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_format.c                                     :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/04 10:46:28 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/04 10:47:07 by tkhemniw         ###   ########.fr       */
+/*   Created: 2022/09/04 10:09:30 by tkhemniw          #+#    #+#             */
+/*   Updated: 2022/09/04 10:09:31 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-#include "../includes/ft_printf.h"
-
-char	check_format(char c, va_list args, t_format *f)
+int	ft_isdigit(int c)
 {
-	if (Check_Flag(c, f)
-		|| Check_Min_Width(c, args, f)
-		|| Check_Precision(c, f)
-		|| Check_Length_Modifier(c, args, f))
-		return (0);
-	return (Check_Conversion_Specifier(c, f));
+	return (c >= '0' && c <= '9');
 }
