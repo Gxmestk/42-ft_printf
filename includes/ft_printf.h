@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/03 22:34:52 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/04 10:45:55 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/05 06:36:26 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include <stdlib.h>
 # include "../libft/libft.h"
 
-# define HOLDER_CONVERSION "cspdiuxX%o"
+# define HOLDER_CONVERSION "cspdiuxX"
 # define HOLDER_ALL "-0# +123456789*"
 # define HOLDER_ALL_FLAGS "-0# +"
 # define HOLDER_JUSTIFY '-'
@@ -48,9 +48,10 @@ typedef struct s_format
 	int		hash;
 	int		minus;
 	int		zero;
+	int		wdt;
 	int		pcs;
 	int		p;
-	int		perc;
+	int		star;
 }		t_format;
 
 typedef struct s_printf
@@ -63,9 +64,13 @@ typedef struct s_printf
 }		t_printf;
 
 int		ft_printf(const char *str, ...);
-char	Check_Format(char c, va_list args, t_format *f);
-int	Check_Flag(char c, t_format *f)
-int	Check_Min_Width(char c, va_list args, t_format *f);
-int	Check_Precision(char c, va_list args, t_format *f);
-int	Check_Length_Modifier(char c, va_list args, t_format *f);
+char	check_format(char c, va_list args, t_format *f);
+int		check_flag(char c, t_format *f);
+int		check_min_width(char c, va_list args, t_format *f);
+int		check_precision(char c, t_format *f);
+int		check_length_modifier(char c, va_list args, t_format *f);
+char	check_conversion_specifier(char c);
+int		print_by_format(char c, va_list args, t_format *f);
+char	*print_d(int d, t_format f);
+
 #endif

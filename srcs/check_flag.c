@@ -6,13 +6,13 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 06:13:35 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/04 10:12:03 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/05 05:47:11 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-int	Check_Flag(char c, t_format *f)
+int	check_flag(char c, t_format *f)
 {
 	if (c == ' ')
 		f->plus = 1;
@@ -21,6 +21,6 @@ int	Check_Flag(char c, t_format *f)
 	else if (c == '#')
 		f->hash = 1;
 	else
-		return 0;
-	return 1;
+		return (0);
+	return (1);
 }

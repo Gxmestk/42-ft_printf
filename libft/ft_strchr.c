@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_length_modifier.c                            :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/04 10:34:43 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/05 04:19:49 by tkhemniw         ###   ########.fr       */
+/*   Created: 2022/09/05 02:42:04 by tkhemniw          #+#    #+#             */
+/*   Updated: 2022/09/05 02:42:07 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "libft.h"
 
-int	check_length_modifier(char c, va_list args, t_format *f)
-{	
-	if (f->star)
-		return (0);
-	if (c == '*' && f->p)
+char	*ft_strchr(const char *str, int c)
+{
+	while (*str)
 	{
-		f->pcs = va_arg(args, int);
-		f->star = 1;
+		if (*str == (char)c)
+			return ((char *)str);
+		str++;
 	}
-	else if (ft_isdigit(c) && f->p)
-		f->pcs = f->pcs * 10 + c - '0';
-	else
-		return (0);
-	return (1);
+	if (*str == (char)c)
+		return ((char *)str);
+	return (0);
 }
