@@ -1,22 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_precision.c                                  :+:      :+:    :+:   */
+/*   check_conversion_specifier.c                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/04 10:31:21 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/04 10:40:11 by tkhemniw         ###   ########.fr       */
+/*   Created: 2022/09/04 10:41:11 by tkhemniw          #+#    #+#             */
+/*   Updated: 2022/09/04 10:42:01 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
-
-int	Check_Precision(char c, t_format *f)
+int	Check_Conversion_Specifier(char c, t_format *f)
 {
-	if (c == '.')
-		f->p++;
-	else
-		return 0;
-	return 1;
+
+	return (0);
 }

@@ -6,9 +6,11 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 05:59:25 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/04 06:14:21 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/04 10:11:58 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../includes/ft_printf.h"
 
 char	Check_Format(char c, va_list args, t_format *f)
 {
