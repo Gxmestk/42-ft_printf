@@ -6,32 +6,31 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 03:20:18 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/05 13:13:50 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/05 22:00:16 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-char	*print_d(int d, t_format f)
+char	*print_d(int d, t_format *f)
 {
-	size_t	len_d;
 	char	*str;
-
-	len_d = len(d);
-	f->len_f = max_of_three(f->wdt, f->pcs, len_d);
+	char	*rstr;
+	
+	f->len_f = sort_max_three((f->arr), f->wdt, f->pcs, len(d));
 	if (f->plus || f->sp || d < 0)
 		f->len_f++;
 	str = (char *)malloc(sizeof(char) * len + 1);
 	if (!str)
 		return (NULL);
-	add_int_prefix();
-	
-	if (f->wdt == len_d)
+	rstr = str;
+	add_int_prefix(&str, d, f);
+	if (f->wdt == f->arr[0])
 		if (f->minus)
-			ft_abs_itoa();
-			print_sp_wdt();
+			ft_abs_itoa(d, &str);
+			print_wdt(&str, f);
 		else
-			print_spoz_wdt();
+			print_wdt(&str, f);
 			ft_abs_itoa();
 	else
 		if (len_d >= f->pcs)

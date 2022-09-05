@@ -1,23 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_abs_itoa.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/05 05:17:47 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/05 06:36:09 by tkhemniw         ###   ########.fr       */
+/*   Created: 2022/09/05 21:26:56 by tkhemniw          #+#    #+#             */
+/*   Updated: 2022/09/05 21:39:08 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *dst, int val, size_t len)
+static	size_t	len(int n)
 {
-	unsigned char	*p_dst;
+	size_t	size;
 
-	p_dst = (unsigned char *)dst;
-	while (len-- > 0)
-		*(p_dst++) = (unsigned char)val;
-	return (dst);
+	size = 0;
+	if (n <= 0)
+		size++;
+	while (n)
+	{
+		size++;
+		n = n / 10;
+	}
+	return (size);
+}
+
+void	ft_abs_itoa(int n, char **str)
+{
+	size_t	size;
+	long	num;
+
+	size = len(n);
+	num = n;
+	if (!(*str))
+		return ;
+	if (num < 0)
+		num = -num;
+	if (num == 0)
+		*str = 48;
+	size--;
+	while (num)
+	{
+		(*str) + size = (num % 10) + 48;
+		num = num / 10;
+		size--;
+	}
+	*str += size + 1;
 }

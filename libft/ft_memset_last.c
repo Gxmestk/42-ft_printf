@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   max_of_three.c                                     :+:      :+:    :+:   */
+/*   ft_memset_last.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/05 12:57:23 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/05 12:58:20 by tkhemniw         ###   ########.fr       */
+/*   Created: 2022/09/05 21:50:27 by tkhemniw          #+#    #+#             */
+/*   Updated: 2022/09/05 21:50:31 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "libft.h"
 
-int	max_of_three(int a,int b,int c)
+void	*ft_memset_last(void *dst, int val, size_t len)
 {
-	if (a >= b && a >= c)
-		return (a);
-	else if (b >= a && b >= c)
-		return (b);
-	else if (c >= a && c >= b)
-		return (c);
+	unsigned char	*p_dst;
+
+	p_dst = (unsigned char *)dst;
+	while (len-- > 0)
+		*(p_dst++) = (unsigned char)val;
+	return (p_dst - 1);
 }

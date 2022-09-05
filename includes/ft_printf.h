@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/03 22:34:52 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/05 06:36:26 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/05 21:54:48 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,8 @@ typedef struct s_format
 	int		pcs;
 	int		p;
 	int		star;
+	size_t	len_f;
+	int		arr[3];
 }		t_format;
 
 typedef struct s_printf
@@ -71,6 +73,11 @@ int		check_precision(char c, t_format *f);
 int		check_length_modifier(char c, va_list args, t_format *f);
 char	check_conversion_specifier(char c);
 int		print_by_format(char c, va_list args, t_format *f);
-char	*print_d(int d, t_format f);
-
+char	*print_d(int d, t_format *f);
+char	*print_c(int d, t_format *f);
+char	*print_u(int d, t_format *f);
+char	*print_x(int d, t_format *f);
+char	*print_p(int d, t_format *f);
+char	*print_s(int d, t_format *f);
+void	add_int_prefix(char *str, int d, t_format *f);
 #endif
