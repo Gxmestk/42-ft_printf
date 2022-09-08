@@ -7,7 +7,9 @@ rm ./srcs/*.o
 
 for i in ./srcs/*.c
 do
- gcc -Wall -Wextra -Werror -c $i
+ #echo $(basename $i) | sed 's/\.c/\.o/' 
+ OB=$(echo $i | sed 's/\.c/\.o/')  
+ gcc -Wall -Wextra -Werror -c $i -o $OB
 done
 
 rm ./srcs/*.o
