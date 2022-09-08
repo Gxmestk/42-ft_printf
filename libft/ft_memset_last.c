@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 21:50:27 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/08 23:06:12 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/08 23:33:29 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void	*ft_memset_last(void *dst, int val, int len)
 {
 	unsigned char	*p_dst;
+	
 	if (len <= 0)
 		return (dst);
 	p_dst = (unsigned char *)dst;
