@@ -6,17 +6,20 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 21:10:22 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/05 21:51:36 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/08 23:06:01 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../includes/ft_printf.h"
+
 void	print_wdt(char **str, t_format *f)
 {
+	char	w;
+
 	if (!(*str))
 		return ;
-	if (f->minus)
-	{
-		*str = (char *)ft_memset(*str, ' ', f->wdt);
-	}
-	else
+	w = ' ';
+	if (f->zero && !f->minus)
+		w = '0';
+	*str = (char *)ft_memset_last(*str, w, f->arr[0] - f->arr[1]);
 }

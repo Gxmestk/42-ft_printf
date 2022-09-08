@@ -2,5 +2,7 @@
 
 int main()
 {
-	ft_printf("game\n");
+	int a =ft_printf("x%+05.3dx\n",123);
+	//int a =ft_printf("game\n");
+	printf("a  = %d\n",a);
 }

@@ -6,19 +6,21 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 13:00:35 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/05 21:23:15 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/08 20:27:22 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../includes/ft_printf.h"
 
 void	add_int_prefix(char **str, int d, t_format *f)
 {
 	if (d < 0)
-		(*str)[0] = '-';
+		**str = '-';
 	else if (f->plus)
-		(*str)[0] = '+';
+		**str = '+';
 	else if (f->sp)
-		(*str)[0] = ' ';
+		**str = ' ';
 	else
 		return ;
-	(*str)++; 
+	(*str)++;
 }

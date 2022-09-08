@@ -6,21 +6,23 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 04:38:09 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/05 21:12:01 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/08 19:35:36 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../includes/ft_printf.h"
 
 void	reset_format(t_printf	*pf)
 {
 	pf->formatting = 1;
-	pf->f->plus = 0;
-	pf->f->sp = 0;
-	pf->f->hash = 0;
-	pf->f->minus = 0;
-	pf->f->zero = 0;
-	pf->f->wdt = 0;
-	pf->f->pcs = 0;
-	pf->f->p = 0;
-	pf->f->star = 0;
-	pf->f->len_f = 1;
+	pf->f.plus = 0;
+	pf->f.sp = 0;
+	pf->f.hash = 0;
+	pf->f.minus = 0;
+	pf->f.zero = 0;
+	pf->f.wdt = 0;
+	pf->f.pcs = 0;
+	pf->f.p = 0;
+	pf->f.star = 0;
+	pf->f.len_f = 1;
 }

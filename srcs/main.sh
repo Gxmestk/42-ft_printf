@@ -2,7 +2,7 @@
 clear
 echo "------------------------------------------MAIN------------------------------------------"
 
-gcc -Wall -Wextra -Werror *.c 
+gcc -Wall -Wextra -Werror *.c ../libft/*.c
 
 ./a.out
 

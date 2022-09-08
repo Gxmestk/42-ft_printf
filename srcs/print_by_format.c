@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 03:01:00 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/05 13:05:42 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/08 19:53:50 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	print_by_format(char c, va_list args, t_format *f)
 {
 	char	*str;
-	
+
 	if (c == 'c')
 		str = print_c(va_arg(args, int), f);
 	else if (c == 's')

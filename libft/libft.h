@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 00:07:54 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/05 21:59:40 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/08 22:45:40 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 
 int		ft_isdigit(int c);
 char	*ft_strchr(const char *str, int c);
-int		sort_max_three(int arr[3], int a, int b, int c)
-void	ft_abs_itoa(int n, char **str);
-void	*ft_memset_last(void *dst, int val, size_t len);
+int		ft_sort_max_three(int arr[3], int a, int b, int c);
+void	*ft_memset_last(void *dst, int val, int len);
 #endif

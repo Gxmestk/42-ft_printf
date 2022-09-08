@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset_last.c                                   :+:      :+:    :+:   */
+/*   print_c.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/05 21:50:27 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/08 23:06:12 by tkhemniw         ###   ########.fr       */
+/*   Created: 2022/09/08 18:48:50 by tkhemniw          #+#    #+#             */
+/*   Updated: 2022/09/08 18:52:27 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/ft_printf.h"
 
-void	*ft_memset_last(void *dst, int val, int len)
+char	*print_c(char c, t_format *f)
 {
-	unsigned char	*p_dst;
-	if (len <= 0)
-		return (dst);
-	p_dst = (unsigned char *)dst;
-	while (len-- > 0)
-		*(p_dst++) = (unsigned char)val;
-	return (p_dst);
+	c++;
+	f++;
+	return (NULL);
 }

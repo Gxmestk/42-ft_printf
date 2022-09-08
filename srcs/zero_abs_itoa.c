@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs_itoa.c                                      :+:      :+:    :+:   */
+/*   zero_abs_itoa.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/05 21:26:56 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/05 21:39:08 by tkhemniw         ###   ########.fr       */
+/*   Created: 2022/09/08 18:12:31 by tkhemniw          #+#    #+#             */
+/*   Updated: 2022/09/08 23:05:37 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/ft_printf.h"
 
-static	size_t	len(int n)
+int	len(int n)
 {
-	size_t	size;
+	int	size;
 
 	size = 0;
-	if (n <= 0)
+	if (n == 0)
 		size++;
 	while (n)
 	{
@@ -27,25 +27,30 @@ static	size_t	len(int n)
 	return (size);
 }
 
-void	ft_abs_itoa(int n, char **str)
+void	zero_abs_itoa(int n, char **str, t_format *f)
 {
-	size_t	size;
+	int		size;
 	long	num;
 
-	size = len(n);
-	num = n;
 	if (!(*str))
 		return ;
+	size = len(n);
+	*str = (char *)ft_memset_last(*str, '0', f->pcs - size);
+	num = n;
 	if (num < 0)
 		num = -num;
 	if (num == 0)
-		*str = 48;
+	{
+		**str = 48;
+		(*str)++;
+		return ;
+	}
 	size--;
 	while (num)
 	{
-		(*str) + size = (num % 10) + 48;
+		*((*str) + size) = (num % 10) + 48;
 		num = num / 10;
 		size--;
 	}
-	*str += size + 1;
+	*str += len(n);
 }
