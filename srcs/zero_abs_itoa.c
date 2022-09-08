@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 18:12:31 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/08 23:05:37 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/09 02:38:55 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	zero_abs_itoa(int n, char **str, t_format *f)
 		num = -num;
 	if (num == 0)
 	{
-		**str = 48;
+		**str = '0';
 		(*str)++;
 		return ;
 	}
