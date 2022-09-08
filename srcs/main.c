@@ -2,7 +2,7 @@
 
 int main()
 {
-	int a =ft_printf("x%+05.3dx\n",123);
+	int a =ft_printf("%1d", 0);
 	//int a =ft_printf("game\n");
 	printf("len  = %d\n",a);
 }
