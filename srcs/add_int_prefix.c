@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 13:00:35 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/09 11:01:22 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/09 12:21:17 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,4 @@ void	add_int_prefix(char **str, long d, t_format *f)
 		return ;
 	(*str)++;
 	f->prefix_len = 1;
-	f->len_f--;
 }
