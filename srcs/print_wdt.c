@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 21:10:22 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/09 14:53:04 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/09 15:38:26 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	print_wdt(char **str, t_format *f)
 	if (!(*str))
 		return ;
 	w = ' ';
-	if (f->zero && !f->minus)
+	if (f->zero && !f->minus && !f->p)
 		w = '0';
 	*str = (char *)ft_memset_last(*str, w, f->arr[0]
 			- f->arr[1] - f->prefix_len);
