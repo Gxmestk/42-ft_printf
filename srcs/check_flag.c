@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 06:13:35 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/09 13:37:11 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/09 15:16:49 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	check_flag(char c, t_format *f)
 		f->sp = 1;
 	else if (c == '#')
 		f->hash = 1;
-	else if (c == '0' && !f->zero)
+	else if (c == '0' && !f->wdt && !f->pcs)
 		f->zero = 1;
 	else if (c == '-' && !f->minus)
 		f->minus = 1;
