@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_wdt.c                                        :+:      :+:    :+:   */
+/*   ft_strupper.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/05 21:10:22 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/09 10:59:01 by tkhemniw         ###   ########.fr       */
+/*   Created: 2022/09/09 11:56:06 by tkhemniw          #+#    #+#             */
+/*   Updated: 2022/09/09 11:56:34 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "libft.h"
 
-void	print_wdt(char **str, t_format *f)
+int	ft_strupper(char *str)
 {
-	char	w;
+	int	i;
 
-	if (!(*str))
-		return ;
-	w = ' ';
-	if (f->zero && !f->minus)
-		w = '0';
-	*str = (char *)ft_memset_last(*str, w, f->arr[0] - f->arr[1] - f->prefix_len);
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] >= 'a' && str[i] <= 'z')
+			str[i] -= 32;
+		i++;
+	}
+	return (str);
 }

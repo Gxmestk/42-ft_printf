@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/03 22:34:52 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/09 10:12:41 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/09 11:50:36 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,27 +20,6 @@
 # include <stdlib.h>
 # include "../libft/libft.h"
 
-# define HOLDER_CONVERSION "cspdiuxX"
-# define HOLDER_ALL "-0# +123456789*"
-# define HOLDER_ALL_FLAGS "-0# +"
-# define HOLDER_JUSTIFY '-'
-# define HOLDER_PREFIX "# +"
-# define HOLDER_PAD '0'
-# define HOLDER_PRECISION '.'
-# define HOLDER_STAR '*'
-
-# define OCTAL_BASE "01234567"
-# define DECIMAL_BASE "0123456789"
-# define HEXADECIMAL_U_BASE "0123456789ABCDEF"
-# define HEXADECIMAL_L_BASE "0123456789abcdef"
-
-# define PTR_HEX_L_PREFIX "0x"
-# define HEX_U_PREFIX "0X"
-# define OCT_PREFIX "0"
-# define MINUS '-'
-# define PLUS '+'
-# define SPACE ' '
-
 typedef struct s_format
 {
 	int		plus;
@@ -53,6 +32,7 @@ typedef struct s_format
 	int		p;
 	int		star;
 	size_t	len_f;
+	int		prefix_len;
 	int		arr[3];
 }		t_format;
 
@@ -85,4 +65,8 @@ void	zero_abs_itoa(long n, char **str, t_format *f);
 void	print_wdt(char **str, t_format *f);
 int		len(long n);
 void	reset_format(t_printf	*pf);
+void	add_hex_prefix(char **str, unsigned int x, t_format *f);
+void	add_hex_content(char **str, unsigned int x, t_format *f);
+int		lenx(unsigned int n);
+void	zero_abs_htoa(unsigned int x, char **str, t_format *f);
 #endif
