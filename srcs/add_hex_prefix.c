@@ -6,9 +6,11 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 11:04:11 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/09 11:09:07 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/09 12:06:42 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../includes/ft_printf.h"
 
 void	add_hex_prefix(char **str, unsigned int x, t_format *f)
 {

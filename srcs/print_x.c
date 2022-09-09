@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 18:50:12 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/09 11:53:54 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/09 12:06:21 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ char	*print_x(unsigned int x, t_format *f, int upper)
 	if (upper)
 		return (ft_strupper(rstr));
 	else
-		return (rstr)
+		return (rstr);
 }

@@ -6,13 +6,13 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 11:56:06 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/09 11:56:34 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/09 12:05:56 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strupper(char *str)
+char	*ft_strupper(char *str)
 {
 	int	i;
 
