@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 03:20:18 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/09 14:02:32 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/09 15:25:11 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*print_d(int d, t_format *f)
 	if (!str)
 		return (NULL);
 	rstr = str;
-	if (f->wdt != f->arr[0] || f->minus || f->zero)
+	if (f->wdt != f->arr[0] || f->minus || f->zero || f->arr[0] == f->arr[1])
 		add_int_prefix(&str, d, f);
 	add_int_content(&str, d, f);
 	return (rstr);
