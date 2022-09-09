@@ -6,18 +6,18 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 18:12:31 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/09 16:40:55 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/09 16:50:56 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-int	len(long n)
+int	len(long n, t_format *f)
 {
 	int	size;
 
 	size = 0;
-	if (n == 0)
+	if (n == 0 && (f->pcs || !f->p))
 		size++;
 	while (n)
 	{
@@ -34,7 +34,7 @@ void	zero_abs_itoa(long n, char **str, t_format *f)
 
 	if (!(*str))
 		return ;
-	size = len(n);
+	size = len(n, f);
 	*str = (char *)ft_memset_last(*str, '0', f->pcs - size);
 	num = n;
 	if (num < 0)
@@ -48,5 +48,5 @@ void	zero_abs_itoa(long n, char **str, t_format *f)
 		num = num / 10;
 		size--;
 	}
-	*str += len(n);
+	*str += len(n, f);
 }

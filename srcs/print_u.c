@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 18:49:53 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/09 13:19:13 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/09 16:50:46 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*print_u(unsigned int u, t_format *f)
 	char	*str;
 	char	*rstr;
 
-	f->len_f = ft_sort_max_three(f->arr, f->wdt, f->pcs, len(u));
+	f->len_f = ft_sort_max_three(f->arr, f->wdt, f->pcs, len(u, f));
 	str = (char *)malloc(sizeof(char) * f->len_f + 1);
 	if (!str)
 		return (NULL);

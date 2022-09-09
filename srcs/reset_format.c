@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 04:38:09 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/09 10:58:39 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/09 16:43:51 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ void	reset_format(t_printf	*pf)
 	pf->f.pcs = 0;
 	pf->f.p = 0;
 	pf->f.star = 0;
-	pf->f.len_f = 1;
+	pf->f.len_f = 0;
 	pf->f.prefix_len = 0;
 }
