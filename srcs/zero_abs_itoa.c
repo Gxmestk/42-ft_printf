@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 18:12:31 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/09 16:33:06 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/09 16:40:55 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,6 @@ void	zero_abs_itoa(long n, char **str, t_format *f)
 		num = -num;
 	if (num == 0 && (f->pcs || !f->p))
 		**str = '0';
-	if (num == 0 && !f->pcs && f->p)
-		**str = ' ';
 	size--;
 	while (num)
 	{

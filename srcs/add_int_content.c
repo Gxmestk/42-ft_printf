@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 17:55:13 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/09 15:40:29 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/09 16:40:41 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ void	add_int_content(char **str, long d, t_format *f)
 		}
 		else
 		{
+			if (d == 0 && !f->pcs && f->p)
+				f->arr[1] = 0;
 			print_wdt(str, f);
 			if (!f->zero || f->p)
 				add_int_prefix(str, d, f);
