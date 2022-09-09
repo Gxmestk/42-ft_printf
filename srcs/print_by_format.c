@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 03:01:00 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/09 02:38:39 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/09 09:57:12 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	print_by_format(char c, va_list args, t_format *f)
 	else if (c == 'i' || c == 'd')
 		str = print_d(va_arg(args, int), f);
 	else if (c == 'u')
-		str = print_u(va_arg(args, int), f);
+		str = print_u(va_arg(args, unsigned int), f);
 	else if (c == 'x')
 		str = print_x(va_arg(args, unsigned int), f, 0);
 	else if (c == 'X')

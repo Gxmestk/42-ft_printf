@@ -6,13 +6,13 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 17:55:13 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/09 02:02:26 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/09 10:24:03 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-void	add_int_content(char **str, int d, t_format *f)
+void	add_int_content(char **str, long d, t_format *f)
 {
 	if (len(d) == f->arr[0] || f->pcs == f->arr[0])
 		zero_abs_itoa(d, str, f);

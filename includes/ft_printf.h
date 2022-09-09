@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/03 22:34:52 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/08 22:44:24 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/09 10:12:41 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,14 +75,14 @@ char	check_conversion_specifier(char c);
 int		print_by_format(char c, va_list args, t_format *f);
 char	*print_d(int d, t_format *f);
 char	*print_c(char c, t_format *f);
-char	*print_u(unsigned u, t_format *f);
+char	*print_u(unsigned int u, t_format *f);
 char	*print_x(unsigned int x, t_format *f, int upper);
 char	*print_p(unsigned long long p, t_format *f);
 char	*print_s(char *s, t_format *f);
-void	add_int_prefix(char **str, int d, t_format *f);
-void	add_int_content(char **str, int d, t_format *f);
-void	zero_abs_itoa(int n, char **str, t_format *f);
+void	add_int_prefix(char **str, long d, t_format *f);
+void	add_int_content(char **str, long d, t_format *f);
+void	zero_abs_itoa(long n, char **str, t_format *f);
 void	print_wdt(char **str, t_format *f);
-int		len(int n);
+int		len(long n);
 void	reset_format(t_printf	*pf);
 #endif

@@ -6,13 +6,13 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 18:12:31 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/09 02:38:55 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/09 10:10:58 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-int	len(int n)
+int	len(long n)
 {
 	int	size;
 
@@ -27,7 +27,7 @@ int	len(int n)
 	return (size);
 }
 
-void	zero_abs_itoa(int n, char **str, t_format *f)
+void	zero_abs_itoa(long n, char **str, t_format *f)
 {
 	int		size;
 	long	num;
