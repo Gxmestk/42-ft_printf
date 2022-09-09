@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 18:12:31 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/09 12:37:25 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/09 13:19:05 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ int	lenx(unsigned int n)
 
 void	zero_abs_htoa(unsigned int x, char **str, t_format *f)
 {
-	int		size;
+	int				size;
+	unsigned int	hex;
 
 	if (!(*str))
 		return ;
@@ -42,11 +43,12 @@ void	zero_abs_htoa(unsigned int x, char **str, t_format *f)
 		return ;
 	}
 	size--;
+	hex = x;
 	while (x)
 	{
 		*((*str) + size) = "0123456789abcdef"[x % 16];
 		x = x / 16;
 		size--;
 	}
-	*str += lenx(x);
+	*str += lenx(hex);
 }
