@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 18:12:31 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/09 13:19:05 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/09 14:54:51 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ void	zero_abs_htoa(unsigned int x, char **str, t_format *f)
 	{
 		**str = '0';
 		(*str)++;
+		if (f->hash)
+			f->len_f -= f->prefix_len;
 		return ;
 	}
 	size--;

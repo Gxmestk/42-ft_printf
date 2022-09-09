@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 11:09:28 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/09 14:40:34 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/09 14:52:56 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,5 @@ void	add_hex_content(char **str, unsigned int x, t_format *f)
 			zero_abs_htoa(x, str, f);
 		}
 	}
-	if (f->arr[0] - f->arr[1] > 0)
-		f->len_f -= f->prefix_len;
 	**str = '\0';
 }
