@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/03 22:34:52 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/09 11:50:36 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/09 13:40:17 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include "../libft/libft.h"
+# include "limits.h"
 
 typedef struct s_format
 {

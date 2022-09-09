@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 06:19:54 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/08 23:04:41 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/09 13:59:21 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,6 @@ int	check_min_width(char c, va_list args, t_format *f)
 		f->wdt = f->wdt * 10 + c - '0';
 	else
 		return (0);
+	f->zero = 1;
 	return (1);
 }

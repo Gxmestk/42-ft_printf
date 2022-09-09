@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 06:13:35 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/08 21:19:10 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/09 13:37:11 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ int	check_flag(char c, t_format *f)
 		f->hash = 1;
 	else if (c == '0' && !f->zero)
 		f->zero = 1;
+	else if (c == '-' && !f->minus)
+		f->minus = 1;
 	else
 		return (0);
 	return (1);
