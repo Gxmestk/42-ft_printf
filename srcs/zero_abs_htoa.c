@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 18:12:31 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/10 10:07:55 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/10 10:44:12 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ int	lenx(unsigned long long n, t_format *f)
 
 void	zero_abs_htoa(unsigned long long x, char **str, t_format *f)
 {
-	int				size;
-	unsigned int	hex;
+	int					size;
+	unsigned long long	hex;
 
 	if (!(*str))
 		return ;

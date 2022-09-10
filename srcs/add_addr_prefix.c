@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   add_hex_prefix.c                                   :+:      :+:    :+:   */
+/*   add_addr_prefix.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/09 11:04:11 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/10 10:13:38 by tkhemniw         ###   ########.fr       */
+/*   Created: 2022/09/10 10:28:49 by tkhemniw          #+#    #+#             */
+/*   Updated: 2022/09/10 10:34:28 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-void	add_hex_prefix(char **str, unsigned long long x, t_format *f)
+void	add_addr_prefix(char **str)
 {
-	if (f->hash)
-	{	
-		if (x != 0)
-		{
-			**str = '0';
-			(*str)++;
-			**str = 'x';
-			(*str)++;
-		}
-	}
-	else
-		return ;
+	**str = '0';
+	(*str)++;
+	**str = 'x';
+	(*str)++;
 }

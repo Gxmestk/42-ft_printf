@@ -6,7 +6,7 @@
 #    By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/03 23:14:19 by tkhemniw          #+#    #+#              #
-#    Updated: 2022/09/09 12:07:59 by tkhemniw         ###   ########.fr        #
+#    Updated: 2022/09/10 10:34:16 by tkhemniw         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,28 +17,30 @@ LIBFT_DIR	= ./libft
 LIBFT		= $(LIBFT_DIR)/libft.a
 
 SRC_DIR		= ./srcs
-SRCS		= $(SRC_DIR)/ft_printf.c 					\
-			  $(SRC_DIR)/check_format.c 				\
-			  $(SRC_DIR)/check_flag.c 					\
-			  $(SRC_DIR)/check_length_modifier.c 		\
-			  $(SRC_DIR)/check_conversion_specifier.c 	\
-			  $(SRC_DIR)/check_min_width.c 				\
-			  $(SRC_DIR)/check_precision.c 				\
-			  $(SRC_DIR)/print_u.c 						\
-			  $(SRC_DIR)/print_s.c 						\
-			  $(SRC_DIR)/print_p.c 						\
-			  $(SRC_DIR)/print_d.c 						\
-			  $(SRC_DIR)/print_c.c 						\
-			  $(SRC_DIR)/print_x.c 						\
-			  $(SRC_DIR)/print_by_format.c 				\
-			  $(SRC_DIR)/add_int_prefix.c 				\
-			  $(SRC_DIR)/add_int_content.c 				\
-			  $(SRC_DIR)/print_wdt.c 					\
-			  $(SRC_DIR)/reset_format.c 				\
-			  $(SRC_DIR)/zero_abs_itoa.c 				\
-			  $(SRC_DIR)/add_hex_content.c 				\
-			  $(SRC_DIR)/add_hex_prefix.c 				\
+SRCS		= $(SRC_DIR)/ft_printf.c 						\
+			  $(SRC_DIR)/check_format.c 					\
+			  $(SRC_DIR)/check_flag.c 						\
+			  $(SRC_DIR)/check_length_modifier.c 			\
+			  $(SRC_DIR)/check_conversion_specifier.c 		\
+			  $(SRC_DIR)/check_min_width.c 					\
+			  $(SRC_DIR)/check_precision.c 					\
+			  $(SRC_DIR)/print_u.c 							\
+			  $(SRC_DIR)/print_s.c 							\
+			  $(SRC_DIR)/print_p.c 							\
+			  $(SRC_DIR)/print_d.c 							\
+			  $(SRC_DIR)/print_c.c 							\
+			  $(SRC_DIR)/print_x.c 							\
+			  $(SRC_DIR)/print_by_format.c 					\
+			  $(SRC_DIR)/add_int_prefix.c 					\
+			  $(SRC_DIR)/add_int_content.c 					\
+			  $(SRC_DIR)/print_wdt.c 						\
+			  $(SRC_DIR)/reset_format.c 					\
+			  $(SRC_DIR)/zero_abs_itoa.c 					\
+			  $(SRC_DIR)/add_hex_content.c 					\
+			  $(SRC_DIR)/add_hex_prefix.c 					\
 			  $(SRC_DIR)/zero_abs_htoa.c 					\
+			  $(SRC_DIR)/add_addr_prefix.c					\
+			  
 
 OBJS 		= $(SRCS:.c=.o)
 

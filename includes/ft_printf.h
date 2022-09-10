@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/03 22:34:52 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/10 10:08:02 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/10 10:34:35 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,4 +70,5 @@ void	add_hex_prefix(char **str, unsigned long long x, t_format *f);
 void	add_hex_content(char **str, unsigned long long x, t_format *f);
 int		lenx(unsigned long long n, t_format *f);
 void	zero_abs_htoa(unsigned long long x, char **str, t_format *f);
+void	add_addr_prefix(char **str);
 #endif
