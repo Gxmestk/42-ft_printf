@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 13:33:31 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/10 14:30:34 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/10 15:17:16 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	add_str_content(char **str, char *s, t_format *f, int lenw)
 		*str += ft_strlcpy(*str, s, lenw + 1);
 		*str = (char *)ft_memset_last(*str, ' ', f->wdt
 				- lenw);
+		**str = '\0';
 	}
 	else
 	{
@@ -26,5 +27,4 @@ void	add_str_content(char **str, char *s, t_format *f, int lenw)
 				- lenw);
 		*str += ft_strlcpy(*str, s, lenw + 1);
 	}
-	**str = '\0';
 }
