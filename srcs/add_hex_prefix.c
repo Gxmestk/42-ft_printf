@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 11:04:11 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/09 14:39:18 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/10 09:08:09 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ void	add_hex_prefix(char **str, unsigned int x, t_format *f)
 			**str = 'x';
 			(*str)++;
 		}
-		f->prefix_len = 2;
 	}
 	else
 		return ;

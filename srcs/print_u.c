@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 18:49:53 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/09 16:50:46 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/10 09:06:56 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@ char	*print_u(unsigned int u, t_format *f)
 	if (!str)
 		return (NULL);
 	rstr = str;
-	if (f->wdt != f->arr[0] || f->minus || f->zero)
-		add_int_prefix(&str, u, f);
 	add_int_content(&str, u, f);
 	return (rstr);
 }

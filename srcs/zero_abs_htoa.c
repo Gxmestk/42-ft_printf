@@ -6,18 +6,18 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 18:12:31 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/09 14:54:51 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/10 09:21:52 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-int	lenx(unsigned int n)
+int	lenx(unsigned int n, t_format *f)
 {
 	int	size;
 
 	size = 0;
-	if (n == 0)
+	if (n == 0 && (f->pcs || !f->p))
 		size++;
 	while (n)
 	{
@@ -34,9 +34,9 @@ void	zero_abs_htoa(unsigned int x, char **str, t_format *f)
 
 	if (!(*str))
 		return ;
-	size = lenx(x);
+	size = lenx(x, f);
 	*str = (char *)ft_memset_last(*str, '0', f->pcs - size);
-	if (x == 0)
+	if (x == 0 && (f->pcs || !f->p))
 	{
 		**str = '0';
 		(*str)++;
@@ -52,5 +52,5 @@ void	zero_abs_htoa(unsigned int x, char **str, t_format *f)
 		x = x / 16;
 		size--;
 	}
-	*str += lenx(hex);
+	*str += lenx(hex, f);
 }

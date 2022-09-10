@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 18:50:12 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/09 13:18:50 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/10 09:22:32 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,18 @@ char	*print_x(unsigned int x, t_format *f, int upper)
 	char	*str;
 	char	*rstr;
 
-	f->len_f = ft_sort_max_three(f->arr, f->wdt, f->pcs, lenx(x));
+	f->len_f = ft_sort_max_three(f->arr, f->wdt, f->pcs, lenx(x, f));
 	if (f->hash)
+	{
 		f->len_f += 2;
+		f->prefix_len += 2;
+	}
 	str = (char *)malloc(sizeof(char) * f->len_f + 1);
 	if (!str)
 		return (NULL);
 	rstr = str;
-	if (f->wdt != f->arr[0] || f->minus || f->zero)
+	if (f->wdt != f->arr[0] || f->minus || (f->zero && !f->p)
+		|| f->arr[0] == f->arr[1])
 		add_hex_prefix(&str, x, f);
 	add_hex_content(&str, x, f);
 	if (upper)
