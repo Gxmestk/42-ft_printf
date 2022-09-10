@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 18:49:04 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/10 15:32:27 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/10 15:48:20 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,9 @@ char	*print_s(char *s, t_format *f)
 	int		len;
 
 	if (!s)
-		return NULL;
-	len = lenw(s, f);
+		len = lenw("(null)", f); 
+	else
+		len = lenw(s, f);
 	if (f->wdt > len)
 		f->len_f = f->wdt;
 	else
@@ -39,6 +40,9 @@ char	*print_s(char *s, t_format *f)
 	if (!str)
 		return (NULL);
 	rstr = str;
-	add_str_content(&str, s, f, len);
+	if (!s)
+		add_str_content(&str, "(null)", f, len);
+	else
+		add_str_content(&str, s, f, len);
 	return (rstr);
 }
