@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 18:49:04 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/10 15:48:20 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/10 15:49:07 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*print_s(char *s, t_format *f)
 	int		len;
 
 	if (!s)
-		len = lenw("(null)", f); 
+		len = lenw("(null)", f);
 	else
 		len = lenw(s, f);
 	if (f->wdt > len)
