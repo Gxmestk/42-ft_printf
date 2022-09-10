@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   reset_format.c                                     :+:      :+:    :+:   */
+/*   add_char_content.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/05 04:38:09 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/10 12:18:58 by tkhemniw         ###   ########.fr       */
+/*   Created: 2022/09/10 13:33:33 by tkhemniw          #+#    #+#             */
+/*   Updated: 2022/09/10 14:33:35 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-void	reset_format(t_printf	*pf)
+void	add_char_content(char **str, char c, t_format *f)
 {
-	pf->formatting = 1;
-	pf->f.plus = 0;
-	pf->f.sp = 0;
-	pf->f.hash = 0;
-	pf->f.minus = 0;
-	pf->f.zero = 0;
-	pf->f.wdt = 0;
-	pf->f.pcs = 0;
-	pf->f.p = 0;
-	pf->f.star = 0;
-	pf->f.len_f = 1;
-	pf->f.prefix_len = 0;
+	if (f->minus)
+	{
+		**str = c;
+		*str++;
+		*str = (char *)ft_memset_last(*str, ' ', f->wdt
+				- lenw);
+	}
+	else
+	{
+		*str = (char *)ft_memset_last(*str, ' ', f->wdt
+				- lenw);
+		**str = c;
+		*str++;
+	}
+	**str = '\0';
 }

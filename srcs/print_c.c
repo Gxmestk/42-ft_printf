@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/08 18:48:50 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/08 18:52:27 by tkhemniw         ###   ########.fr       */
+/*   Created: 2022/09/10 12:00:27 by tkhemniw          #+#    #+#             */
+/*   Updated: 2022/09/10 14:31:09 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,17 @@
 
 char	*print_c(char c, t_format *f)
 {
-	c++;
-	f++;
-	return (NULL);
+	char	*str;
+	char	*rstr;
+
+	if (f->wdt > 1)
+		f->len_f = f->wdt;
+	else if (f->p && !f->pcs)
+		f->len_f = 0;
+	str = (char *)malloc(sizeof(char) * f->len_f + 1);
+	if (!str)
+		return (NULL);
+	rstr = str;
+	add_char_content(&str, c, f);
+	return (rstr);
 }

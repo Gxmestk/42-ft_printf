@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   reset_format.c                                     :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/05 04:38:09 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/10 12:18:58 by tkhemniw         ###   ########.fr       */
+/*   Created: 2022/09/10 14:12:44 by tkhemniw          #+#    #+#             */
+/*   Updated: 2022/09/10 14:15:36 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
-
-void	reset_format(t_printf	*pf)
+int	ft_strlcpy(char *dst, const char *src, int size)
 {
-	pf->formatting = 1;
-	pf->f.plus = 0;
-	pf->f.sp = 0;
-	pf->f.hash = 0;
-	pf->f.minus = 0;
-	pf->f.zero = 0;
-	pf->f.wdt = 0;
-	pf->f.pcs = 0;
-	pf->f.p = 0;
-	pf->f.star = 0;
-	pf->f.len_f = 1;
-	pf->f.prefix_len = 0;
+	int	len;
+	int	i;
+
+	len = 0;
+	i = 0;
+	while (src[len] != '\0')
+	{
+		if (len + 1 < size)
+		{
+			i++;
+			dst[len] = src[len];
+		}
+		len++;
+	}
+	if (size > 0)
+		dst[i] = '\0';
+	return (len);
 }

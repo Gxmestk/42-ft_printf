@@ -6,7 +6,7 @@
 #    By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/08 23:33:05 by tkhemniw          #+#    #+#              #
-#    Updated: 2022/09/09 12:12:33 by tkhemniw         ###   ########.fr        #
+#    Updated: 2022/09/10 14:14:31 by tkhemniw         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,8 @@ SRCS :=  		ft_memset_last.c 	\
 				ft_sort_max_three.c \
 				ft_isdigit.c 		\
 				ft_strupper.c		\
+				ft_strlen.c 		\
+				ft_strlcpy.c 		\
 
 OBJS := $(SRCS:.c=.o)
 
