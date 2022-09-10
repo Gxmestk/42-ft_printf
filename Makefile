@@ -6,7 +6,7 @@
 #    By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/03 23:14:19 by tkhemniw          #+#    #+#              #
-#    Updated: 2022/09/10 14:11:04 by tkhemniw         ###   ########.fr        #
+#    Updated: 2022/09/10 14:40:56 by tkhemniw         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,7 @@ SRCS		= $(SRC_DIR)/ft_printf.c 						\
 			  $(SRC_DIR)/add_addr_prefix.c					\
 			  $(SRC_DIR)/add_addr_content.c					\
 			  $(SRC_DIR)/zero_abs_ptoa.c 					\
-			  $(SRC_DIR)/add_char_content.c 					\
+			  $(SRC_DIR)/add_char_content.c 				\
 			  $(SRC_DIR)/add_str_content.c 					\
 
 OBJS 		= $(SRCS:.c=.o)
