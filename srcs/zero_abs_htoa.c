@@ -6,13 +6,13 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 18:12:31 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/10 09:21:52 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/10 10:07:55 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-int	lenx(unsigned int n, t_format *f)
+int	lenx(unsigned long long n, t_format *f)
 {
 	int	size;
 
@@ -27,7 +27,7 @@ int	lenx(unsigned int n, t_format *f)
 	return (size);
 }
 
-void	zero_abs_htoa(unsigned int x, char **str, t_format *f)
+void	zero_abs_htoa(unsigned long long x, char **str, t_format *f)
 {
 	int				size;
 	unsigned int	hex;

@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/03 22:34:52 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/10 09:22:16 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/10 10:08:02 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,8 +66,8 @@ void	zero_abs_itoa(long n, char **str, t_format *f);
 void	print_wdt(char **str, t_format *f);
 int		len(long n, t_format *f);
 void	reset_format(t_printf	*pf);
-void	add_hex_prefix(char **str, unsigned int x, t_format *f);
-void	add_hex_content(char **str, unsigned int x, t_format *f);
-int		lenx(unsigned int n, t_format *f);
-void	zero_abs_htoa(unsigned int x, char **str, t_format *f);
+void	add_hex_prefix(char **str, unsigned long long x, t_format *f);
+void	add_hex_content(char **str, unsigned long long x, t_format *f);
+int		lenx(unsigned long long n, t_format *f);
+void	zero_abs_htoa(unsigned long long x, char **str, t_format *f);
 #endif

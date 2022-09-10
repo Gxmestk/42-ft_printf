@@ -6,13 +6,13 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 11:09:28 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/10 09:21:34 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/10 10:07:28 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-void	add_hex_content(char **str, unsigned int x, t_format *f)
+void	add_hex_content(char **str, unsigned long long x, t_format *f)
 {
 	if (lenx(x, f) == f->arr[0] || f->pcs == f->arr[0])
 		zero_abs_htoa(x, str, f);
