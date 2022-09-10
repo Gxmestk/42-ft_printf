@@ -6,17 +6,18 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 18:49:04 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/11 00:30:49 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/11 03:34:01 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
+#include <string.h>
 
 int	lenw(char *s, t_format *f)
 {	
 	int	s_len;
 
-	s_len = ft_strlen(s);
+	s_len = strlen(s);
 	if (f->p && f->pcs < s_len)
 		return (f->pcs);
 	return (s_len);

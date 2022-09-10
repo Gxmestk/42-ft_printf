@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 03:01:00 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/11 02:57:25 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/11 02:58:50 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,6 @@ int	print_by_format(char c, va_list args, t_format *f)
 		str = print_x(va_arg(args, unsigned int), f, 1);
 	else if (c == '%')
 		str = print_c('%', f);
-	if (f->len_f > 2147480000)
-	{
-		free(str);
-		return (-1);
-	}
 	write(1, str, f->len_f);
 	free(str);
 	return (f->len_f);
