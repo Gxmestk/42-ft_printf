@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   zero_abs_htoa.c                                    :+:      :+:    :+:   */
+/*   zero_abs_ptoa.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/08 18:12:31 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/10 11:05:15 by tkhemniw         ###   ########.fr       */
+/*   Created: 2022/09/10 11:01:06 by tkhemniw          #+#    #+#             */
+/*   Updated: 2022/09/10 11:06:42 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-int	lenx(unsigned long long n, t_format *f)
+int	lenp(unsigned long long n)
 {
 	int	size;
 
 	size = 0;
-	if (n == 0 && (f->pcs || !f->p))
+	if (n == 0)
 		size++;
 	while (n)
 	{
@@ -27,16 +27,16 @@ int	lenx(unsigned long long n, t_format *f)
 	return (size);
 }
 
-void	zero_abs_htoa(unsigned long long x, char **str, t_format *f)
+void	zero_abs_ptoa(unsigned long long p, char **str, t_format *f)
 {
 	int					size;
-	unsigned long long	hex;
+	unsigned long long	addr;
 
 	if (!(*str))
 		return ;
-	size = lenx(x, f);
+	size = lenp(p);
 	*str = (char *)ft_memset_last(*str, '0', f->pcs - size);
-	if (x == 0 && (f->pcs || !f->p))
+	if (p == 0 && (f->pcs || !f->p))
 	{
 		**str = '0';
 		(*str)++;
@@ -45,12 +45,12 @@ void	zero_abs_htoa(unsigned long long x, char **str, t_format *f)
 		return ;
 	}
 	size--;
-	hex = x;
-	while (x)
+	addr = p;
+	while (p)
 	{
-		*((*str) + size) = "0123456789abcdef"[x % 16];
-		x = x / 16;
+		*((*str) + size) = "0123456789abcdef"[p % 16];
+		p = p / 16;
 		size--;
 	}
-	*str += lenx(hex, f);
+	*str += lenp(addr);
 }

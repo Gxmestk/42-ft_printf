@@ -6,7 +6,7 @@
 #    By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/03 23:14:19 by tkhemniw          #+#    #+#              #
-#    Updated: 2022/09/10 10:34:16 by tkhemniw         ###   ########.fr        #
+#    Updated: 2022/09/10 11:01:28 by tkhemniw         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,8 @@ SRCS		= $(SRC_DIR)/ft_printf.c 						\
 			  $(SRC_DIR)/add_hex_prefix.c 					\
 			  $(SRC_DIR)/zero_abs_htoa.c 					\
 			  $(SRC_DIR)/add_addr_prefix.c					\
+			  $(SRC_DIR)/add_addr_content.c					\
+			  $(SRC_DIR)/zero_abs_ptoa.c 					\
 			  
 
 OBJS 		= $(SRCS:.c=.o)
