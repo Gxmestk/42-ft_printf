@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 18:49:04 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/10 15:07:05 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/10 15:32:27 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ char	*print_s(char *s, t_format *f)
 	char	*rstr;
 	int		len;
 
-	
+	if (!s)
+		return NULL;
 	len = lenw(s, f);
 	if (f->wdt > len)
 		f->len_f = f->wdt;

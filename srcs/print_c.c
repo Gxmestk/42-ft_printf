@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 12:00:27 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/10 14:31:09 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/10 15:32:45 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*print_c(char c, t_format *f)
 	char	*str;
 	char	*rstr;
 
+	if (!c)
+		return NULL;
 	if (f->wdt > 1)
 		f->len_f = f->wdt;
 	else if (f->p && !f->pcs)
