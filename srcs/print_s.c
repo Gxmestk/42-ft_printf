@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 18:49:04 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/10 23:48:27 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/11 00:28:45 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	*print_s(char *s, t_format *f)
 		f->len_f = f->wdt;
 	else
 		f->len_f = len;
-	str = (char *)malloc(sizeof(char) * f->len_f + 1);
+	str = (char *)malloc(sizeof(char) * f->len_f + 10);
 	if (!str)
 		return (NULL);
 	rstr = str;
