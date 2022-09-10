@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/03 22:34:52 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/10 14:20:02 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/11 00:58:15 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,18 +23,18 @@
 
 typedef struct s_format
 {
-	int		plus;
-	int		sp;
-	int		hash;
-	int		minus;
-	int		zero;
-	int		wdt;
-	int		pcs;
-	int		p;
-	int		star;
-	size_t	len_f;
-	int		prefix_len;
-	int		arr[3];
+	int			plus;
+	int			sp;
+	int			hash;
+	int			minus;
+	int			zero;
+	int			wdt;
+	int			pcs;
+	int			p;
+	int			star;
+	long long	len_f;
+	int			prefix_len;
+	int			arr[3];
 }		t_format;
 
 typedef struct s_printf

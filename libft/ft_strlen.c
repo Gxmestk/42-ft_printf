@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 12:56:28 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/11 00:33:33 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/11 00:37:43 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 int	ft_strlen(const char *str)
 {
-	char	*rstr;
+	int	i;
 
-	rstr = (char *)str;
+	i = 0;
 	if (!str)
 		return (0);
-	while (*str)
-		str++;
-	return (str - rstr);
+	while (str[i])
+		i++;
+	return (i);
 }
