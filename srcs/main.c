@@ -7,7 +7,7 @@ int main()
 	//int a = ft_printf("x%-.dx", 0);
 	//int a =   ft_printf("the address is %13p", (void *)0x7ffe6b8e60c8);
 	//int a =   ft_printf("the address is %20p", (void *)0xffffffffffffffff);
-	int a = ft_printf("%1s", "\0");
+	int a = ft_printf("%-9sScience!", "-42");
 	//int a =   ft_printf("%#3x", 255);
 	//int a =ft_printf("game\n");
 	printf("\n\nlen  = %d\n",a);
