@@ -12,6 +12,6 @@ gcc -Wall -Werror -Wextra  main.o -L. libftprintf.a
 
 make -s fclean
 
-rm a.out
+##rm a.out
 
 rm main.o
