@@ -6,12 +6,12 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 18:49:04 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/11 03:37:58 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/11 18:51:55 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
-#include <string.h>
+#include <string.h>//
 
 int	lenw(char *s, t_format *f)
 {	
@@ -19,7 +19,7 @@ int	lenw(char *s, t_format *f)
 
 	if (!s)
 		return (0);
-	s_len = strlen(s);
+	s_len = 5;//strlen(s);
 	if (f->p && f->pcs < s_len)
 		return (f->pcs);
 	return (s_len);
