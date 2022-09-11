@@ -43,7 +43,7 @@ int main()
 		a++;
 	}*/
 	printf("\n");
-	int a = printf("x%.*dx",0,0);
+	int a = ft_printf("%.*i",-4,8);
 	printf("\nlen = %d ",a);
 }
 /*   (void *)0xffffffffffffffff NULL (void *)0x8000000000000000   */
