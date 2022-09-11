@@ -6,11 +6,11 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 11:01:06 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/10 11:06:42 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/11 22:50:21 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
 
 int	lenp(unsigned long long n)
 {

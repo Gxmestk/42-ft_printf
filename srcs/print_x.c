@@ -6,11 +6,11 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 18:50:12 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/10 10:08:51 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/11 23:11:18 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
 
 char	*print_x(unsigned int x, t_format *f, int upper)
 {

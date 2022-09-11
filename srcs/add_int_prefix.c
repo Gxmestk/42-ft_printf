@@ -6,11 +6,11 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 13:00:35 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/09 15:56:58 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/11 23:11:50 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
 
 void	add_int_prefix(char **str, long d, t_format *f)
 {

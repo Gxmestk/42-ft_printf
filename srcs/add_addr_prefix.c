@@ -6,11 +6,11 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 10:28:49 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/10 10:34:28 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/11 23:07:16 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
 
 void	add_addr_prefix(char **str)
 {

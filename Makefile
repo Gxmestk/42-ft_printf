@@ -6,7 +6,7 @@
 #    By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/03 23:14:19 by tkhemniw          #+#    #+#              #
-#    Updated: 2022/09/10 14:40:56 by tkhemniw         ###   ########.fr        #
+#    Updated: 2022/09/11 23:45:06 by tkhemniw         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,7 +55,7 @@ $(NAME): $(OBJS) $(LIBFT)
 			ar -rc $(NAME) $(OBJS)
 
 .c.o: 		
-			gcc -Wall -Wextra -Werror -c $< -o $(<:.c=.o)
+			gcc -Wall -Wextra -Werror -I $(INCS_DIR) -c $< -o $(<:.c=.o)
 
 $(LIBFT):
 			make -C $(LIBFT_DIR)

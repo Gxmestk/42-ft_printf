@@ -6,11 +6,11 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 06:19:54 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/11 21:59:59 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/11 23:12:31 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
 
 int	check_min_width(char c, va_list args, t_format *f)
 {

@@ -6,11 +6,11 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 17:54:50 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/08 17:54:52 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/11 23:13:10 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "libft.h"
 
 static void	ft_swap(int *x, int *y)
 {

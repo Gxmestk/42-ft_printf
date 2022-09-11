@@ -6,11 +6,11 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 06:13:35 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/11 21:37:17 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/11 23:11:02 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
 
 int	check_flag(char c, t_format *f)
 {

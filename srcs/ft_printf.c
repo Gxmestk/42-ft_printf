@@ -6,11 +6,11 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 19:01:57 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/11 22:11:14 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/11 23:11:32 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
 
 static void	read_input(char *str, t_printf *pf)
 {

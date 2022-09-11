@@ -6,11 +6,11 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 13:33:33 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/10 14:35:46 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/11 23:07:22 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
 
 void	add_char_content(char **str, char c, t_format *f)
 {

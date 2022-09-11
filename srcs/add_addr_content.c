@@ -6,11 +6,11 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 10:51:36 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/10 11:08:36 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/11 23:06:58 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
 
 void	add_addr_content(char **str, unsigned long long p, t_format *f)
 {

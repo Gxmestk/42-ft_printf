@@ -6,11 +6,11 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 21:10:22 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/11 02:11:47 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/11 23:08:08 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
 
 void	print_wdt(char **str, t_format *f)
 {
