@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 06:19:54 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/09 15:17:00 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/11 21:37:34 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ int	check_min_width(char c, va_list args, t_format *f)
 {
 	int	star;
 
-	if (f->star)
+	if (f->star > 0 || f->p)
 		return (0);
-	if (c == '*' && !f->p)
+	if (c == '*')
 	{
 		star = va_arg(args, int);
 		if (star < 0)
@@ -27,9 +27,9 @@ int	check_min_width(char c, va_list args, t_format *f)
 			star *= -1;
 		}
 		f->wdt = star;
-		f->star = 1;
+		f->star++;
 	}
-	else if (ft_isdigit(c) && !f->p)
+	else if (ft_isdigit(c))
 		f->wdt = f->wdt * 10 + c - '0';
 	else
 		return (0);
