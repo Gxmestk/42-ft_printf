@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 10:34:43 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/11 22:00:55 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/11 22:20:12 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,10 @@ int	check_length_modifier(char c, va_list args, t_format *f)
 	if (c == '*')
 	{
 		star = va_arg(args, int);
-		if (star >= 0)
-		{
-			f->pcs = star;
-			f->star++;
-		}
+		if (star < 0)
+			star *= -1;
+		f->pcs = star;
+		f->star++;
 	}	
 	else if (ft_isdigit(c))
 		f->pcs = f->pcs * 10 + c - '0';

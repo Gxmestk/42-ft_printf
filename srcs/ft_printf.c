@@ -6,7 +6,7 @@
 /*   By: tkhemniw <gt.khemniwat@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 19:01:57 by tkhemniw          #+#    #+#             */
-/*   Updated: 2022/09/11 22:09:02 by tkhemniw         ###   ########.fr       */
+/*   Updated: 2022/09/11 22:11:14 by tkhemniw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,5 @@ int	ft_printf(const char *str, ...)
 	va_start(pf.args, str);
 	read_input((char *)str, &pf);
 	va_end(pf.args);
-	printf("games");
 	return (pf.len);
 }
